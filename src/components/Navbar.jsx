@@ -1,3 +1,4 @@
+// Importing components and icons from MUI library
 import {
   AppBar,
   Avatar,
@@ -10,21 +11,23 @@ import {
   Menu,
   MenuItem,
 } from "@mui/material";
+
+// Importing React and useState hooks
 import React, { useState } from "react";
 
-// Icons
+// Importing icons from MUI library
 import FacebookIcon from "@mui/icons-material/Facebook";
 import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 
-// StyledToolbar
+// Defining StyledToolbar component with custom styling
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
   justifyContent: "space-between",
   backgroundColor: "blue",
 });
 
-// top search bar
+// Defining Search component with custom styling
 const Search = styled("div")(({ theme }) => ({
   backgroundColor: "white",
   padding: "0 10px",
@@ -32,7 +35,7 @@ const Search = styled("div")(({ theme }) => ({
   width: "40%",
 }));
 
-// top right side icons
+// Defining Icons component with custom styling
 const Icons = styled(Box)(({ theme }) => ({
   display: "none",
   cursor: "pointer",
@@ -43,7 +46,7 @@ const Icons = styled(Box)(({ theme }) => ({
   },
 }));
 
-// UserBox for small devises like mobile
+// Defining UserBox component with custom styling
 const UserBox = styled(Box)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
@@ -53,9 +56,12 @@ const UserBox = styled(Box)(({ theme }) => ({
   },
 }));
 
-// navbar
+// Defining Navbar component
 const Navbar = () => {
+  // Initializing state for menu
   const [open, setOpen] = useState(false);
+
+  // Returning AppBar component with children components and props
   return (
     <AppBar position="sticky">
       <StyledToolbar>
